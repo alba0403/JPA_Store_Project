@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: "mysql:latest"
+    container_name: "repas-examen-mysql-jpa"
+    environment:  #definim l'usuari, la contrasenya i la base de dades
+      MYSQL_DATABASE: "myqldatabaserepaso"
+      MYSQL_PASSWORD: "secretpassword"
+      MYSQL_ROOT_PASSWORD: "verysecretpassword"
+      MYSQL_USER: "alba2002"
+    ports:
+      - "3306:3306"
